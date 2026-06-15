@@ -19,8 +19,6 @@
 
 ![MDown demo](docs/demo.gif)
 
-> Drop your recording in the `docs/` folder as `demo.gif` and it will show up here automatically.
-
 ## Why MDown?
 
 MDown is a lightweight, native desktop Markdown editor that stays out of your way. It opens instantly, works completely offline, and renders everything you throw at it — math, diagrams, code, footnotes — in a live preview next to your text. When you're done, export a clean `.md` or a self-contained `.html`, or merge a stack of documents into one.
