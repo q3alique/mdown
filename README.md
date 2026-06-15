@@ -54,17 +54,17 @@ Prebuilt binaries for Windows are published on the [**Releases**](https://github
 
 ## Usage
 
-1. **Open a file** — `Ctrl+O`, or drag a `.md` file onto the window. You can also start typing in the scratch tab.
-2. **Write & preview** — type in the editor; the preview updates live. Use the **Outline** panel in the sidebar to jump around long documents.
-3. **Save** — `Ctrl+S` to save, `Ctrl+Shift+S` to save as.
-4. **Export** — `Ctrl+Shift+E` to export the current document as Markdown or HTML, optionally with a table of contents.
-5. **Combine** — `Ctrl+Shift+C` to merge multiple documents into one, with an optional cover page and TOC.
+1. **Open a file** : `Ctrl+O`, or drag a `.md` file onto the window. You can also start typing in the scratch tab.
+2. **Write & preview** : type in the editor; the preview updates live. Use the **Outline** panel in the sidebar to jump around long documents.
+3. **Save** : `Ctrl+S` to save, `Ctrl+Shift+S` to save as.
+4. **Export** : `Ctrl+Shift+E` to export the current document as Markdown or HTML, optionally with a table of contents.
+5. **Combine** : `Ctrl+Shift+C` to merge multiple documents into one, with an optional cover page and TOC.
 
 Want to try it quickly? The [`samples/`](samples) folder contains a few example documents that exercise math, diagrams, code, and tables.
 
 ### Producing a PDF
 
-MDown deliberately doesn't bundle a PDF engine. Instead, export to clean Markdown (or HTML) and open the result in a tool you already trust — for example **Obsidian** — to print or export a PDF with your own theme. This keeps MDown small and gives you full control over the final styling.
+MDown deliberately doesn't bundle a PDF engine. Instead, export to clean Markdown (or HTML) and open the result in a tool you already trust, for example **Obsidian**, to print or export a PDF with your own theme. This keeps MDown small and gives you full control over the final styling.
 
 ## Keyboard shortcuts
 
@@ -84,10 +84,10 @@ MDown deliberately doesn't bundle a PDF engine. Instead, export to clean Markdow
 
 Open with `Ctrl+,`. Preferences are stored locally and persist between sessions.
 
-- **Editor** — font size, line numbers, word wrap, tab size.
-- **Appearance** — UI theme (Dark / Light) and editor theme (One Dark / GitHub Light).
-- **Export** — default template (Slate / Linen / Scholar) and default page size (A4 / Letter).
-- **Preview** — content width (Normal / Wide / Full).
+- **Editor** : font size, line numbers, word wrap, tab size.
+- **Appearance** : UI theme (Dark / Light) and editor theme (One Dark / GitHub Light).
+- **Export** : default template (Slate / Linen / Scholar) and default page size (A4 / Letter).
+- **Preview** : content width (Normal / Wide / Full).
 
 ## Building from source
 
