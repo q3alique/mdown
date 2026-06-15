@@ -27,18 +27,18 @@ No account. No cloud. No telemetry. Just a fast local editor.
 
 ## Features
 
-- **Live split preview** — write Markdown on the left, see the rendered result on the right, kept in sync as you type and scroll.
-- **Math** — inline and block LaTeX rendered with KaTeX.
-- **Diagrams** — Mermaid flowcharts, sequence diagrams, Gantt charts, and more, straight from fenced code blocks.
-- **Syntax highlighting** — code blocks highlighted with highlight.js.
-- **Rich Markdown** — footnotes, attributes, heading anchors, tables, task lists, and YAML frontmatter.
-- **Tabs & document outline** — work across multiple files, with a navigable heading tree that jumps both the preview and the editor to the same spot.
-- **Quick switcher** — fuzzy-find and jump between open files and recents (`Ctrl+P`).
-- **Export** — emit a clean `.md` or a self-contained styled `.html`, with an optional generated table of contents. Open the exported Markdown in your favourite tool (e.g. Obsidian) to produce a polished PDF with your own theme.
-- **Document combiner** — merge several Markdown files into a single document, with an optional cover page and combined table of contents.
-- **Export themes** — three built-in styles (Slate, Linen, Scholar) for HTML/print output.
-- **Drag & drop** — drop `.md` files onto the window to open them.
-- **Offline & standalone** — everything runs locally. No account, no network, no telemetry.
+- **Live split preview** : write Markdown on the left, see the rendered result on the right, kept in sync as you type and scroll.
+- **Math** : inline and block LaTeX rendered with KaTeX.
+- **Diagrams** : Mermaid flowcharts, sequence diagrams, Gantt charts, and more, straight from fenced code blocks.
+- **Syntax highlighting** : code blocks highlighted with highlight.js.
+- **Rich Markdown** : footnotes, attributes, heading anchors, tables, task lists, and YAML frontmatter.
+- **Tabs & document outline** : work across multiple files, with a navigable heading tree that jumps both the preview and the editor to the same spot.
+- **Quick switcher** : fuzzy-find and jump between open files and recents (`Ctrl+P`).
+- **Export** : emit a clean `.md` or a self-contained styled `.html`, with an optional generated table of contents. Open the exported Markdown in your favourite tool (e.g. Obsidian) to produce a polished PDF with your own theme.
+- **Document combiner** : merge several Markdown files into a single document, with an optional cover page and combined table of contents.
+- **Export themes** : three built-in styles (Slate, Linen, Scholar) for HTML/print output.
+- **Drag & drop** : drop `.md` files onto the window to open them.
+- **Offline & standalone** : everything runs locally. No account, no network, no telemetry.
 
 ## Download
 
