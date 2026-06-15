@@ -1,0 +1,286 @@
+/* ── Third-party CSS (must come before Tailwind for proper ordering) ── */
+@import 'katex/dist/katex.min.css';
+@import 'highlight.js/styles/github-dark.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Dark-themed scrollbars ──────────────────────────────────────── */
+
+/* Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;       /* gray-800 */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;       /* gray-600 */
+  border-radius: 4px;
+  border: 1px solid #374151; /* gray-700 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;       /* gray-500 */
+}
+
+::-webkit-scrollbar-corner {
+  background: #1f2937;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #1f2937;
+}
+
+/* Make the scrollbar in the editor area slightly narrower */
+.cm-editor .cm-scroller::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.cm-editor .cm-scroller {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 transparent;
+}
+
+/* ── Preview pane styles ────────────────────────────────────────── */
+
+.preview-default {
+  /* Base typography */
+  line-height: 1.7;
+  color: #d1d5db;   /* Tailwind gray-300 */
+}
+
+.preview-default h1 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin: 1.5em 0 0.5em;
+  color: #f3f4f6;    /* gray-100 */
+  border-bottom: 1px solid #374151;  /* gray-700 */
+  padding-bottom: 0.3em;
+}
+
+.preview-default h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 1.3em 0 0.4em;
+  color: #f3f4f6;
+}
+
+.preview-default h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.2em 0 0.3em;
+  color: #e5e7eb;    /* gray-200 */
+}
+
+.preview-default h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1em 0 0.3em;
+  color: #e5e7eb;
+}
+
+.preview-default p {
+  margin: 0.75em 0;
+}
+
+.preview-default a {
+  color: #60a5fa;    /* blue-400 */
+  text-decoration: underline;
+}
+
+.preview-default a:hover {
+  color: #93c5fd;    /* blue-300 */
+}
+
+/* Headings are wrapped in a self-link by markdown-it-anchor. Keep them looking
+   like headings — no link underline or color — rather than underlined text. */
+.preview-default .header-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+
+.preview-default blockquote {
+  border-left: 3px solid #60a5fa;
+  margin: 1em 0;
+  padding: 0.25em 1em;
+  color: #9ca3af;    /* gray-400 */
+  background: #1f2937;  /* gray-800 */
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.preview-default code {
+  background: #1f2937;  /* gray-800 */
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: #f472b6;    /* pink-400 */
+}
+
+.preview-default pre {
+  background: #111827;  /* gray-900 */
+  border: 1px solid #374151;
+  border-radius: 0.375rem;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.preview-default pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: 0.8125rem;
+}
+
+.preview-default ul,
+.preview-default ol {
+  margin: 0.75em 0;
+  padding-left: 1.5em;
+}
+
+.preview-default li {
+  margin: 0.25em 0;
+}
+
+.preview-default table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+.preview-default th,
+.preview-default td {
+  border: 1px solid #374151;
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+
+.preview-default th {
+  background: #1f2937;
+  font-weight: 600;
+}
+
+.preview-default hr {
+  border: none;
+  border-top: 1px solid #374151;
+  margin: 1.5em 0;
+}
+
+.preview-default img {
+  max-width: 100%;
+  border-radius: 0.375rem;
+  margin: 1em 0;
+}
+
+.preview-default .footnotes {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #374151;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Mermaid containers */
+.preview-default .mermaid {
+  background: #1f2937;
+  border-radius: 0.375rem;
+  padding: 1em;
+  margin: 1em 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+/* KaTeX */
+.preview-default .katex {
+  font-size: 1.1em;
+}
+
+/* ── Light theme overrides ──────────────────────────────────────── */
+/* Applied when the root element has data-ui-theme="light"          */
+
+[data-ui-theme="light"] {
+  /* Main backgrounds */
+  --tw-bg-gray-900: #f8fafc;
+  --tw-bg-gray-800: #f1f5f9;
+  --tw-bg-gray-700: #e2e8f0;
+
+  color-scheme: light;
+}
+
+/* Override Tailwind utility classes used throughout the app */
+
+[data-ui-theme="light"] .bg-gray-900  { background-color: #f8fafc !important; }
+[data-ui-theme="light"] .bg-gray-800  { background-color: #f1f5f9 !important; }
+[data-ui-theme="light"] .bg-gray-700  { background-color: #e2e8f0 !important; }
+[data-ui-theme="light"] .bg-gray-600  { background-color: #cbd5e1 !important; }
+[data-ui-theme="light"] .bg-\[\#1a1f2e\] { background-color: #e2e8f0 !important; }
+
+[data-ui-theme="light"] .text-gray-100 { color: #0f172a !important; }
+[data-ui-theme="light"] .text-gray-200 { color: #1e293b !important; }
+[data-ui-theme="light"] .text-gray-300 { color: #334155 !important; }
+[data-ui-theme="light"] .text-gray-400 { color: #475569 !important; }
+[data-ui-theme="light"] .text-gray-500 { color: #64748b !important; }
+
+[data-ui-theme="light"] .border-gray-700 { border-color: #cbd5e1 !important; }
+[data-ui-theme="light"] .border-gray-600 { border-color: #94a3b8 !important; }
+
+/* Hover states */
+[data-ui-theme="light"] .hover\:bg-gray-700:hover { background-color: #e2e8f0 !important; }
+[data-ui-theme="light"] .hover\:bg-gray-600:hover { background-color: #cbd5e1 !important; }
+[data-ui-theme="light"] .hover\:text-gray-200:hover { color: #1e293b !important; }
+[data-ui-theme="light"] .hover\:text-gray-100:hover { color: #0f172a !important; }
+
+/* Light scrollbars */
+[data-ui-theme="light"] ::-webkit-scrollbar-track { background: #e2e8f0; }
+[data-ui-theme="light"] ::-webkit-scrollbar-thumb { background: #94a3b8; border-color: #cbd5e1; }
+[data-ui-theme="light"] ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+[data-ui-theme="light"] ::-webkit-scrollbar-corner { background: #e2e8f0; }
+[data-ui-theme="light"] * { scrollbar-color: #94a3b8 #e2e8f0; }
+
+/* Preview content — light variant */
+[data-ui-theme="light"] .preview-default { color: #1e293b; }
+[data-ui-theme="light"] .preview-default h1 { color: #0f172a; border-color: #cbd5e1; }
+[data-ui-theme="light"] .preview-default h2 { color: #0f172a; }
+[data-ui-theme="light"] .preview-default h3,
+[data-ui-theme="light"] .preview-default h4 { color: #1e293b; }
+[data-ui-theme="light"] .preview-default a { color: #2563eb; }
+[data-ui-theme="light"] .preview-default a:hover { color: #1d4ed8; }
+[data-ui-theme="light"] .preview-default blockquote {
+  color: #475569;
+  background: #f1f5f9;
+  border-left-color: #3b82f6;
+}
+[data-ui-theme="light"] .preview-default code {
+  background: #f1f5f9;
+  color: #db2777;
+}
+[data-ui-theme="light"] .preview-default pre {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+[data-ui-theme="light"] .preview-default th,
+[data-ui-theme="light"] .preview-default td { border-color: #cbd5e1; }
+[data-ui-theme="light"] .preview-default th { background: #f1f5f9; }
+[data-ui-theme="light"] .preview-default hr { border-color: #cbd5e1; }
+[data-ui-theme="light"] .preview-default .footnotes { color: #64748b; border-color: #cbd5e1; }
+[data-ui-theme="light"] .preview-default .mermaid { background: #f1f5f9; }
+
+/* Highlight.js — switch to github-light in light mode */
+[data-ui-theme="light"] .hljs {
+  background: #f6f8fa;
+  color: #24292e;
+}

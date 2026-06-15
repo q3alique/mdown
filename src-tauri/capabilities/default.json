@@ -1,0 +1,15 @@
+{
+  "identifier": "default",
+  "description": "Default capabilities for MDown",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "store:default",
+    "core:path:default",
+    "core:event:default",
+    "core:window:default",
+    "core:app:default",
+    "fs:default",
+    "dialog:default"
+  ]
+}

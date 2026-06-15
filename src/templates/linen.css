@@ -1,0 +1,399 @@
+/* ============================================
+   linen.css — Minimal Warm Serif (PDF Export)
+   ============================================ */
+
+@page {
+  size: A4;
+  margin: 30mm;
+
+  @bottom-center {
+    content: counter(page);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 9pt;
+    color: #8c6b4f;
+  }
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.8;
+    color: #2c2416;
+    background: #fafaf8;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: #b45309;
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
+  a:not([href^="#"])::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #8c6b4f;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #e5d5c0;
+    margin: 2.5em 0;
+  }
+}
+
+/* ---- Headings ---- */
+
+h1 {
+  font-size: 26pt;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  color: #1c1207;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  text-align: center;
+  page-break-after: avoid;
+}
+
+h2 {
+  font-size: 18pt;
+  font-weight: 700;
+  color: #1c1207;
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid #e5d5c0;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 14pt;
+  font-weight: 700;
+  font-style: italic;
+  color: #6b4c1e;
+  margin-top: 1.3em;
+  margin-bottom: 0.3em;
+  page-break-after: avoid;
+}
+
+h4 {
+  font-size: 12pt;
+  font-weight: 700;
+  color: #2c2416;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  page-break-after: avoid;
+}
+
+h5 {
+  font-size: 11pt;
+  font-weight: 700;
+  font-style: italic;
+  color: #4a3828;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  page-break-after: avoid;
+}
+
+h6 {
+  font-size: 10pt;
+  font-weight: 400;
+  font-variant: small-caps;
+  color: #6b4c1e;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  page-break-after: avoid;
+}
+
+/* ---- Paragraphs & Text ---- */
+
+p {
+  margin: 0 0 1em 0;
+  orphans: 3;
+  widows: 3;
+}
+
+strong {
+  font-weight: 700;
+  color: #1c1207;
+}
+
+em {
+  font-style: italic;
+}
+
+/* ---- Links ---- */
+
+a {
+  color: #b45309;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+/* Heading self-links (markdown-it-anchor) should look like headings. */
+.header-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Code ---- */
+
+code {
+  font-family: 'Cascadia Code', 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-size: 0.88em;
+  background: #fef3c7;
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+  word-break: break-all;
+}
+
+pre {
+  background: #fef3c7;
+  border-left: 3px solid #d97706;
+  padding: 1em 1.25em;
+  margin: 1.2em 0;
+  overflow-x: auto;
+  page-break-inside: avoid;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.88em;
+}
+
+/* ---- Blockquote ---- */
+
+blockquote {
+  border-left: 3px solid #d97706;
+  margin: 1.2em 0;
+  padding: 0.5em 1.25em;
+  font-style: italic;
+  color: #6b4c1e;
+  background: transparent;
+  page-break-inside: avoid;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Tables ---- */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  page-break-inside: avoid;
+}
+
+th {
+  background: #78350f;
+  color: #fef3c7;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.6em 0.75em;
+  border: 1px solid #78350f;
+}
+
+td {
+  padding: 0.5em 0.75em;
+  border: 1px solid #e5d5c0;
+}
+
+tr:nth-child(even) {
+  background: #fdf6ee;
+}
+
+/* ---- Lists ---- */
+
+ul,
+ol {
+  margin: 0.5em 0;
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.25em;
+}
+
+li > ul,
+li > ol {
+  margin: 0.25em 0;
+}
+
+/* ---- Cover Page ---- */
+
+.cover-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  page-break-after: always;
+  padding: 3em;
+}
+
+.cover-page hr {
+  width: 60px;
+  border: none;
+  border-top: 3px solid #b45309;
+  margin: 1.5em auto;
+}
+
+.cover-page h1 {
+  font-size: 36pt;
+  font-weight: 400;
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: #1c1207;
+  border-bottom: none;
+  margin-bottom: 0.3em;
+  padding-bottom: 0;
+}
+
+.cover-page .cover-subtitle {
+  font-size: 14pt;
+  font-style: italic;
+  color: #6b4c1e;
+  margin-bottom: 0.5em;
+}
+
+.cover-page .cover-author {
+  font-size: 12pt;
+  font-style: italic;
+  color: #2c2416;
+  margin-top: 1em;
+}
+
+.cover-page .cover-date {
+  font-size: 10pt;
+  color: #8c6b4f;
+  margin-top: 0.5em;
+}
+
+/* ---- Table of Contents ---- */
+
+.toc {
+  page-break-after: always;
+  margin: 1em 0;
+}
+
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.toc li {
+  margin-bottom: 0.4em;
+  line-height: 1.8;
+}
+
+.toc a {
+  color: #b45309;
+  text-decoration: none;
+  word-break: break-all;
+  display: flex;
+  align-items: baseline;
+}
+
+.toc a::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px dotted #c4a88a;
+  margin: 0 0.5em;
+}
+
+.toc .toc-h1 {
+  font-weight: 700;
+  font-size: 12pt;
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+  color: #1c1207;
+}
+
+.toc .toc-h2 {
+  padding-left: 1.5em;
+  font-weight: 500;
+  font-size: 11pt;
+}
+
+.toc .toc-h3 {
+  padding-left: 3em;
+  font-size: 10.5pt;
+  color: #6b4c1e;
+}
+
+/* ---- Footers / Misc ---- */
+
+footer {
+  font-size: 9pt;
+  color: #8c6b4f;
+  text-align: center;
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid #e5d5c0;
+}
+
+/* ---- Page Breaks ---- */
+
+.page-break {
+  page-break-before: always;
+}
+
+.page-break-after {
+  page-break-after: always;
+}
+
+/* ---- Print-Specific Overrides ---- */
+
+@media print {
+  a:not([href^="#"])::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #8c6b4f;
+  }
+
+  a[href^="#"]::after {
+    content: "";
+  }
+
+  pre,
+  blockquote,
+  table {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+}
